@@ -38,7 +38,14 @@
         }
 
         function introOwnerBoat(){
-            if (isset($_POST["option"])) {
+            global $propArr;
+            global $vaixArr;
+            if (isset($_POST["eslora"],$_POST["tipus"],$_POST["matricula"],$_POST["any"])) {
+                $vaix = new ships($_POST["eslora"],$_POST["tipus"],$_POST["matricula"],$_POST["any"]);
+                $prop = new owner($_POST["nom"], $_POST["llicencia"], $vaix);
+                array_push($propArr, $prop);
+                array_push($vaixArr, $vaix);
+            }
         }
 
     ?>
@@ -79,7 +86,7 @@
         Tipus de vaixell: <input type="text" name="tipus" />
         Matricula de vaixell: <input type="text" name="matricula" />
         Any del vaixell: <input type="text" name="eslora" />
-        <input type="submit" />
+        <input type="submit" onclick="introOwnerBoat()" />
     </form>
 
 </body>
