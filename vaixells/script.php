@@ -86,7 +86,7 @@
         Tipus de vaixell: <input type="text" name="tipus" />
         Matricula de vaixell: <input type="text" name="matricula" />
         Any del vaixell: <input type="text" name="eslora" />
-        <input type="submit" onclick="introOwnerBoat()" />
+        <input type="submit" />
     </form>
 
 </body>
