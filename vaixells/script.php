@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <ul>
         <?php
 
         include 'ships.php';
@@ -58,8 +57,21 @@
             }
         }
 
+        echo "<h2>Vaixells</h2>
+        <ul>";
+    
+        showShips();
+        
+        echo "</ul>";
+
+        echo "<h2>Propietaris</h2>
+        <ul>";
+    
+        showOwners();
+        
+        echo "</ul>";
+        
         ?>
-    </ul>
 
     <h4>Introdueix vaixell i propietari</h4>
     <form method="get">
@@ -77,19 +89,6 @@
         </br>
         <input type="submit" />
     </form>
-
-    <h2>Vaixells</h2>
-    <ul>
-        <?php
-        showShips();
-        ?>
-    </ul>
-    <h2>Propietaris</h2>
-    <ul>
-        <?php
-        showOwners();
-        ?>
-    </ul>
 
 </body>
 
