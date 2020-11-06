@@ -8,6 +8,9 @@
 
     <?php
 
+        include 'ships.php';
+        include 'owner.php';
+
         $vaix1 = new ships(33, "veler", "1234UUU", 2002);
         $vaix2 = new ships(3, "lanxa", "3456KKK", 2002);
         $vaix3 = new ships(42, "llaut", "5678PRS", 2002);
@@ -40,9 +43,9 @@
         function introOwnerBoat(){
             global $propArr;
             global $vaixArr;
-            if (isset($_POST["eslora"],$_POST["tipus"],$_POST["matricula"],$_POST["any"])) {
-                $vaix = new ships($_POST["eslora"],$_POST["tipus"],$_POST["matricula"],$_POST["any"]);
-                $prop = new owner($_POST["nom"], $_POST["llicencia"], $vaix);
+            if (isset($_GET["eslora"],$_GET["tipus"],$_GET["matricula"],$_GET["any"])) {
+                $vaix = new ships($_GET["eslora"],$_GET["tipus"],$_GET["matricula"],$_GET["any"]);
+                $prop = new owner($_GET["nom"], $_GET["llicencia"], $vaix);
                 array_push($propArr, $prop);
                 array_push($vaixArr, $vaix);
             }
@@ -61,10 +64,10 @@
 
     <ul>
         <?php
-        if (isset($_POST["option"])) {
-            if ($_POST["option"] == 1) {
+        if (isset($_GET["option"])) {
+            if ($_GET["option"] == 1) {
                 showShips();
-            } else if ($_POST["option"] == 2) {
+            } else if ($_GET["option"] == 2) {
                 showOwners();
             } else {
                 echo "<p>Not a valid option</p>";
@@ -73,13 +76,13 @@
         ?>
     </ul>
 
-    <form method="post">
+    <form method="GET">
         Option: <input type="text" name="option" />
         <input type="submit" />
     </form>
 
     <h4>Introdueix vaixell i propietari</h4>
-    <form method="post">
+    <form method="get">
         Nom propietari: <input type="text" name="nom" />
         Tipus de Llicencia: <input type="text" name="llicencia" />
         Eslora del vaixell: <input type="text" name="eslora" />
