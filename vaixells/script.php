@@ -9,12 +9,6 @@
 </head>
 
 <body>
-
-    <ol>
-        <li>Mostra els vaixells</li>
-        <li>Mostra els propietaris</li>
-    </ol>
-
     <ul>
         <?php
 
@@ -64,22 +58,8 @@
             }
         }
 
-        if (isset($_GET["option"])) {
-            if ($_GET["option"] == 1) {
-                showShips();
-            } else if ($_GET["option"] == 2) {
-                showOwners();
-            } else {
-                echo "<p>Not a valid option</p>";
-            }
-        }
         ?>
     </ul>
-
-    <form method="GET">
-        Option: <input type="text" name="option" />
-        <input type="submit" />
-    </form>
 
     <h4>Introdueix vaixell i propietari</h4>
     <form method="get">
@@ -97,6 +77,19 @@
         </br>
         <input type="submit" />
     </form>
+
+    <h2>Vaixells</h2>
+    <ul>
+        <?php
+        showShips();
+        ?>
+    </ul>
+    <h2>Propietaris</h2>
+    <ul>
+        <?php
+        showOwners();
+        ?>
+    </ul>
 
 </body>
 
