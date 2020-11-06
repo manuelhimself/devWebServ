@@ -38,8 +38,8 @@
         {
             global $vaixArr;
 
-            for ($i = 0; $i < count($vaixArr); $i++) {
-                echo "<li>" . $vaixArr[$i] . "</li>";
+            foreach ($vaixArr as $vaixell) {
+                echo "<li>" . $vaixell . "</li>";
             }
         }
 
@@ -47,8 +47,8 @@
         {
             global $propArr;
 
-            for ($i = 0; $i < count($propArr); $i++) {
-                echo "<li>" . $propArr[$i] . "</li>";
+            foreach ($propArr as $owner) {
+                echo "<li>" . $owner . "</li>";
             }
         }
 
