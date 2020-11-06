@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <ul>
         <?php
 
         include 'ships.php';
@@ -27,24 +28,6 @@
         $vaixArr = array($vaix1, $vaix2, $vaix3, $vaix4);
         $propArr = array($prop1, $prop2, $prop3, $prop4);
 
-        function showShips()
-        {
-            global $vaixArr;
-
-            foreach ($vaixArr as $vaixell) {
-                echo "<li>" . $vaixell . "</li>";
-            }
-        }
-
-        function showOwners()
-        {
-            global $propArr;
-
-            foreach ($propArr as $owner) {
-                echo "<li>" . $owner . "</li>";
-            }
-        }
-
         function introOwnerBoat()
         {
             global $propArr;
@@ -57,21 +40,8 @@
             }
         }
 
-        echo "<h2>Vaixells</h2>
-        <ul>";
-    
-        showShips();
-        
-        echo "</ul>";
-
-        echo "<h2>Propietaris</h2>
-        <ul>";
-    
-        showOwners();
-        
-        echo "</ul>";
-        
         ?>
+    </ul>
 
     <h4>Introdueix vaixell i propietari</h4>
     <form method="get">
@@ -89,6 +59,23 @@
         </br>
         <input type="submit" />
     </form>
+
+    <h2>Vaixells</h2>
+    <ul>
+        <?php
+        foreach ($vaixArr as $vaixell) {
+            echo "<li>" . $vaixell . "</li>";
+        }
+        ?>
+    </ul>
+    <h2>Propietaris</h2>
+    <ul>
+        <?php
+        foreach ($propArr as $owner) {
+            echo "<li>" . $owner . "</li>";
+        }
+        ?>
+    </ul>
 
 </body>
 
