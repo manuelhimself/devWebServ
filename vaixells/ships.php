@@ -43,4 +43,10 @@ class ships {
     function setAny($any){
         $this->any=$any;
     }
+    
+    function __toString(){
+        global $eslora, $tipus, $matricula, $any;
+        echo "Eslora: " . $eslora . " Tipus: " . $tipus . " Matricula: " . $matricula . " Any: " . $any;
+    }
+
 }

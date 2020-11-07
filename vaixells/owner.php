@@ -1,4 +1,7 @@
 <?php
+
+include 'ships.php';
+
 class owner {
     private $nom;
     private $llicencia;
@@ -32,6 +35,11 @@ class owner {
 
     function setVaixell($vaixell){
         $this->vaixell=$vaixell;
+    }
+
+    function __toString(){
+        global $nom, $llicencia, $vaixell;
+        echo "Nom: " . $nom . " Llicencia: " . $llicencia . " Vaixell: " . $vaixell->matricula;
     }
 
 }

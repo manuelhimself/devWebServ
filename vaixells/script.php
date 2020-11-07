@@ -64,7 +64,7 @@
     <ul>
         <?php
         foreach ($vaixArr as $vaixell) {
-            echo "<li>" . $vaixell . "</li>";
+            echo "<li>" . $vaixell->__toString() . "</li>";
         }
         ?>
     </ul>
@@ -72,7 +72,7 @@
     <ul>
         <?php
         foreach ($propArr as $owner) {
-            echo "<li>" . $owner . "</li>";
+            echo "<li>" . $owner->__toString() . "</li>";
         }
         ?>
     </ul>
