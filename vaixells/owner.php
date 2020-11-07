@@ -39,7 +39,7 @@ class owner {
 
     function __toString(){
         global $nom, $llicencia, $vaixell;
-        echo "Nom: " . $nom . " Llicencia: " . $llicencia . " Vaixell: " . $vaixell->matricula;
+        echo "Nom: " . $nom . " Llicencia: " . $llicencia;
     }
 
 }
