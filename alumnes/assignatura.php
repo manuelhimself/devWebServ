@@ -35,7 +35,7 @@ class assignatura {
         $this->codi=$codi;
     }
 
-    function comp($object1, $object2){
+    function cmp($object1, $object2){
         return strcmp($object1->name, $object2->name);
     }
 
