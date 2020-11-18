@@ -35,14 +35,13 @@ class assignatura {
         $this->codi=$codi;
     }
 
-    function cmp($object1, $object2){
-        return strcmp($object1->name, $object2->name);
-    }
-
     function ordenar(){
         global $alumnes;
         $alumnesOrd = $alumnes;
-        usort($alumnesOrd, "cmp");
+        function compare($object1, $object2){
+        return strcmp($object1->getNom(), $object2->getNom());
+        }
+        usort($alumnesOrd, 'compare');
         return $alumnesOrd;
     }
 
