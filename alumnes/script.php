@@ -21,7 +21,7 @@ $alOrd = $assig->ordenar();
 
 //echo "<ul>";
 foreach($alOrd as $alumne){
-    echo /*"<li>" . */$alumne->__toString()/* . "</li> "*/;
+    echo /*"<li>" . */$alumne/*->__toString() . "</li> "*/;
 }
 //echo "</ul>";
 ?>
