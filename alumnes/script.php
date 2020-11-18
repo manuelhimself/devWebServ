@@ -1,7 +1,7 @@
 <?php
 
-include "alumnes.php";
-include "assignatura.php";
+require_once("alumnes.php");
+require_once("assignatura.php");
 
 $alumne1 = new alumne("Pep", "30", "42936810P");
 $alumne2 = new alumne("Joan", "20", "43728193J");

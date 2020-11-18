@@ -1,7 +1,5 @@
 <?php
 
-include "alumnes.php";
-
 class assignatura {
     private $nom;
     private $codi;
