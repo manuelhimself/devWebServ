@@ -5,10 +5,10 @@ class assignatura {
     private $codi;
     private $alumnes;
 
-    function __construct($nom, $codi){
+    function __construct($nom, $codi, $alumnes){
         $this->nom=$nom;
         $this->codi=$codi;
-        $this->alumnes=array();
+        $this->alumnes=$alumnes;
     }
 
     function getNom(){

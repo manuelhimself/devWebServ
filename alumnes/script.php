@@ -9,7 +9,9 @@ $alumne3 = new alumne("Ignasi", "22", "49170655A");
 $alumne4 = new alumne("Marc", "19", "47911238L");
 $alumne5 = new alumne("Pere", "25", "49000125N");
 
-$assig = new assignatura("Diseny web", "034");
+$alumnes = array($alumne1, $alumne2, $alumne3, $alumne4);
+
+$assig = new assignatura("Diseny web", "034", $alumnes);
 
 $assig->addAlumne($alumne1);
 $assig->addAlumne($alumne2);
