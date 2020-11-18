@@ -13,12 +13,6 @@ $alumnes = array($alumne1, $alumne2, $alumne3, $alumne4);
 
 $assig = new assignatura("Diseny web", "034", $alumnes);
 
-$assig->addAlumne($alumne1);
-$assig->addAlumne($alumne2);
-$assig->addAlumne($alumne2);
-$assig->addAlumne($alumne4);
-$assig->addAlumne($alumne5);
-
 $alOrd = $assig->ordenar();
 
 echo "<ul>";
