@@ -26,7 +26,7 @@ class assignatura {
     }
 
     function addAlumne($alumne){
-        $alumnes[]=$alumne;
+        array_push($alumnes, $alumne);
     }
 
     function getCodi(){
@@ -41,28 +41,13 @@ class assignatura {
         return strcmp($object1->name, $object2->name);
     }
 
-    function printAlumnes(){
-        global $alumnes;
-        echo "<ul>";
-        foreach($alumnes as $alumne){
-            echo "<li>" . $alumne->__toString() . "</li> ";
-        }
-        echo "</ul>";
-    }
-
     function ordenar(){
         global $alumnes;
         $alumnesOrd = $alumnes;
         usort($alumnesOrd, "cmp");
         return $alumnesOrd;
     }
-    
-    
-    function __toString(){
-        global $nom, $codi;
-        echo "Nom: " . $nom . " Codi: " . $codi . " Llista d'alumnes: <br>";
-        $this->printAlumnes();
-    }
+
 
 }
 ?>
